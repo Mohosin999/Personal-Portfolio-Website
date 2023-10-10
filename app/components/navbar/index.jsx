@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import Wrapper from "../wrapper";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import CustomLink from "../UI/custom-link";
-import { FacebookIcon, TwitterIcon, GithubIcon } from "../icons";
+import { GithubIcon, TwitterIcon, LinkedInIcon, FacebookIcon } from "../icons";
 
 const Navbar = () => {
   return (
@@ -16,17 +17,47 @@ const Navbar = () => {
           <CustomLink href="/articles" title="Articles" className="ml-4" />
         </nav>
 
-        {/* Right section of the navbar. */}
-        <nav>
-          <Link href="/">
+        {/**
+         * Right section of the navbar.
+         * Social links
+         */}
+        <nav class="flex flex-wrap items-center justify-center">
+          <motion.a
+            href="https://web.facebook.com/MohosinH99"
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            class="w-6 mr-3"
+          >
             <FacebookIcon />
-          </Link>
-          <Link href="/">
-            <TwitterIcon />
-          </Link>
-          <Link href="/">
+          </motion.a>
+          <motion.a
+            href="https://github.com/Mohosin999"
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            class="w-6 mx-3"
+          >
             <GithubIcon />
-          </Link>
+          </motion.a>
+          <motion.a
+            href=""
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            class="w-6 mx-3"
+          >
+            <TwitterIcon />
+          </motion.a>
+          <motion.a
+            href=""
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            class="w-6 ml-3"
+          >
+            <LinkedInIcon />
+          </motion.a>
         </nav>
       </div>
     </Wrapper>
