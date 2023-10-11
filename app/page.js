@@ -36,6 +36,12 @@ const Home = () => {
               Resume <LinkArrow class="w-6 ml-1" />
             </Link>
             <Link
+              href="/"
+              class="flex items-center bg-gray-900 text-gray-200 p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-gray-200 hover:text-gray-900 border-2 border-solid border-transparent hover:border-gray-900 ml-4 animate-bounce"
+            >
+              Hire Me
+            </Link>
+            <Link
               href="mailto:mohosin.h.akash@gmail.com"
               target="_blank"
               class="ml-4 text-lg font-medium capitalize text-gray-900 underline"
