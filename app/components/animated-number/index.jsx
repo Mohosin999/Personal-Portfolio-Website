@@ -4,7 +4,6 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 const AnimatedNumber = ({ value }) => {
   const ref = useRef(null);
-  console.log(ref.current);
 
   // Animation hooks from frammer motion.
   const motionValue = useMotionValue(0);
