@@ -8,11 +8,11 @@ const CustomLink = ({ href, title, className = "" }) => {
   const pathName = usePathname();
 
   return (
-    <Link href={href} class={`${className} relative group`}>
+    <Link href={href} className={`${className} relative group`}>
       {title}
       {/* Underline below the link - start */}
       <span
-        class={`h-[1px] bg-gray-900 inline-block absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] bg-gray-900 inline-block absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           pathName === href ? "w-full" : "w-0"
         }`}
       >

@@ -31,9 +31,9 @@ const singleWord = {
 
 const AnimatedText = ({ text, className = "" }) => {
   return (
-    <div class="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
+    <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
       <motion.h1
-        class={`inline-block w-full text-gray-900 font-bold capitalize text-8xl ${className}`}
+        className={`inline-block w-full text-gray-900 font-bold capitalize text-8xl ${className}`}
         variants={quote}
         initial="initial"
         animate="animate"
@@ -41,7 +41,7 @@ const AnimatedText = ({ text, className = "" }) => {
         {text.split(" ").map((word, index) => (
           <motion.span
             key={word + "-" + index}
-            class="inline-block"
+            className="inline-block"
             variants={singleWord}
           >
             {word}&nbsp;

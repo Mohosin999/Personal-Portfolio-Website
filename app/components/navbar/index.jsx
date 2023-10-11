@@ -8,7 +8,7 @@ import { GithubIcon, TwitterIcon, LinkedInIcon, FacebookIcon } from "../icons";
 const Navbar = () => {
   return (
     <Wrapper>
-      <div class="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         {/* Left section of the navbar. */}
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
@@ -21,13 +21,13 @@ const Navbar = () => {
          * Right section of the navbar.
          * Social links
          */}
-        <nav class="flex flex-wrap items-center justify-center">
+        <nav className="flex flex-wrap items-center justify-center">
           <motion.a
             href="https://web.facebook.com/MohosinH99"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            class="w-6 mr-3"
+            className="w-6 mr-3"
           >
             <FacebookIcon />
           </motion.a>
@@ -36,7 +36,7 @@ const Navbar = () => {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            class="w-6 mx-3"
+            className="w-6 mx-3"
           >
             <GithubIcon />
           </motion.a>
@@ -45,7 +45,7 @@ const Navbar = () => {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            class="w-6 mx-3"
+            className="w-6 mx-3"
           >
             <TwitterIcon />
           </motion.a>
@@ -54,7 +54,7 @@ const Navbar = () => {
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            class="w-6 ml-3"
+            className="w-6 ml-3"
           >
             <LinkedInIcon />
           </motion.a>
