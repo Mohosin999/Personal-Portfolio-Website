@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import myImage from "../../public/images/akash.jpg";
+// Components
 import AnimatedText from "../components/animated-text";
 import Wrapper from "../components/wrapper";
-import myImage from "../../public/images/akash.jpg";
 import AnimatedNumber from "../components/animated-number";
+import Skills from "../components/skills";
+import Experience from "../components/experience";
 
 const About = () => {
   return (
@@ -82,6 +85,10 @@ const About = () => {
             </div>
             {/* Right side - end */}
           </div>
+
+          {/* Skills section */}
+          <Skills />
+          <Experience />
         </Wrapper>
       </main>
     </>
