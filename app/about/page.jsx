@@ -89,6 +89,7 @@ const About = () => {
           {/* Skills section */}
           <Skills />
           <Experience />
+          <h2 className="mt-16 text-8xl font-bold">Education</h2>
         </Wrapper>
       </main>
     </>
