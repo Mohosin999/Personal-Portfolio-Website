@@ -69,6 +69,7 @@ const Navbar = () => {
             <LinkedInIcon />
           </motion.a>
 
+          {/* Theme switcher button */}
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className="ml-3 flex items-center justify-center rounded-full p-1"
