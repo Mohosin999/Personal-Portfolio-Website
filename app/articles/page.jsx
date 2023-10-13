@@ -1,18 +1,21 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Wrapper from "../components/wrapper";
 import AnimatedText from "../components/animated-text";
 import articleImg from "../../public/featured.png";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 // Framer motion component
 const FramerImage = motion(Image);
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-gray-100 border border-solid border-gray-900 rounded-2xl">
+    <li className="col-span-1 w-full p-4 bg-gray-100 border border-solid border-gray-900 rounded-2xl relative">
+      {/* The following div for 3d design - start */}
+      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900" />
+      {/* The following div for 3d design - end */}
       <Link
         href={link}
         target="_blank"
@@ -37,6 +40,60 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
   );
 };
 
+const MovingImg = ({ title, img, link }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const imgRef = useRef(null);
+
+  function handleMouse(e) {
+    imgRef.current.style.display = "inline-block";
+    x.set(e.pageX);
+    y.set(-10);
+  }
+
+  function handleMouseLeave(e) {
+    imgRef.current.style.display = "none";
+    x.set(0);
+    y.set(0);
+  }
+
+  return (
+    <Link
+      href={link}
+      target="_blank"
+      onMouseMove={handleMouse}
+      onMouseLeave={handleMouseLeave}
+    >
+      <h2 className="capitalize text-xl font-semibold hover:underline">
+        {title}
+      </h2>
+      <FramerImage
+        style={{ x: x, y: y }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
+        ref={imgRef}
+        src={img}
+        alt={title}
+        className="w-96 h-auto z-10 absolute hidden rounded-lg"
+      />
+    </Link>
+  );
+};
+
+const Article = ({ title, link, img, date }) => {
+  return (
+    <motion.li
+      initial={{ y: 200 }}
+      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+      viewport={{ once: true }}
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-gray-100 text-gray-900 first:mt-0 border border-solid border-gray-900 border-r-4 border-b-4"
+    >
+      <MovingImg title={title} img={img} link={link} />
+      <span className="text-yellow-800 font-semibold pl-4">{date}</span>
+    </motion.li>
+  );
+};
+
 const Articles = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
@@ -55,6 +112,49 @@ const Articles = () => {
             link="/"
             time="7 min to read"
             summary="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, expedita ipsa. Dolor ratione, culpa assumenda debitis in error. Architecto, sit?"
+            img={articleImg}
+          />
+        </ul>
+
+        {/* All articles list */}
+        <h2 className="w-full font-bold text-4xl text-center my-16 mt-32">
+          All Articles
+        </h2>
+        <ul>
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
+            img={articleImg}
+          />
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
+            img={articleImg}
+          />
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
+            img={articleImg}
+          />
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
+            img={articleImg}
+          />
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
+            img={articleImg}
+          />
+          <Article
+            title="JS All You Need to Know"
+            link="/"
+            date="January 14, 2022"
             img={articleImg}
           />
         </ul>

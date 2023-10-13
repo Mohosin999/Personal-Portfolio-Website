@@ -3,9 +3,19 @@ import React from "react";
 import Wrapper from "../wrapper";
 import { motion } from "framer-motion";
 import CustomLink from "../UI/custom-link";
-import { GithubIcon, TwitterIcon, LinkedInIcon, FacebookIcon } from "../icons";
+import {
+  GithubIcon,
+  TwitterIcon,
+  LinkedInIcon,
+  FacebookIcon,
+  SunIcon,
+  MoonIcon,
+} from "../icons";
+import useThemeSwitcher from "@/app/hooks/useThemeSwitcher";
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <Wrapper>
       <div className="flex items-center justify-between">
@@ -58,6 +68,17 @@ const Navbar = () => {
           >
             <LinkedInIcon />
           </motion.a>
+
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className="ml-3 flex items-center justify-center rounded-full p-1"
+          >
+            {mode === "dark" ? (
+              <SunIcon className="fill-gray-900" />
+            ) : (
+              <MoonIcon className="fill-gray-900" />
+            )}
+          </button>
         </nav>
       </div>
     </Wrapper>

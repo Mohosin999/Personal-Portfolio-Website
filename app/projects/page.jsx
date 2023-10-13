@@ -63,7 +63,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-gray-900 bg-gray-200 p-6 relative">
       {/* The following div for 3d design - start */}
-      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-gray-900" />
+      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900" />
       {/* The following div for 3d design - end */}
       <Link
         href={link}
