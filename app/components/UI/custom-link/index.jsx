@@ -8,7 +8,10 @@ const CustomLink = ({ href, title, className = "" }) => {
   const pathName = usePathname();
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link
+      href={href}
+      className={`${className} relative group dark:text-gray-100`}
+    >
       {title}
       {/* Underline below the link - start */}
       <span

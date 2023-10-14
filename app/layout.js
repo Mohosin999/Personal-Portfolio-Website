@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 // Components
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,14 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </main>
+        <Script id="theme-switcher" strategy="beforeInteractive">
+          {`
+          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }`}
+        </Script>
       </body>
     </html>
   );
