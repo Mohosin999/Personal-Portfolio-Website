@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const useThemeSwitcher = () => {
   const preferDarkQuery = "(prefer-color-scheme: dark)";
   const [mode, setMode] = useState("");
-  console.log("Mode Value --> ", mode);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
@@ -33,6 +32,7 @@ const useThemeSwitcher = () => {
       }
     };
 
+    // The function call check all the conditions on first load.
     handleChange();
 
     mediaQuery.addEventListener("change", handleChange);
@@ -42,7 +42,21 @@ const useThemeSwitcher = () => {
   // If mode change and user explicitly toggles the theme, update localStorage
   useEffect(() => {
     if (mode === "dark" || mode === "light") {
+      // Set the mode value in localStorage that'll be dark or light
       window.localStorage.setItem("theme", mode);
+
+      /**
+       * Now set the classList value.
+       * If mode will be dark, then remove the light class and add the dark class.
+       * Otherwise remove the dark class and add the light class
+       */
+      if (mode === "dark") {
+        document.documentElement.classList.remove("light");
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.add("light");
+      }
     }
   }, [mode]);
 
@@ -50,61 +64,3 @@ const useThemeSwitcher = () => {
 };
 
 export default useThemeSwitcher;
-
-// import React, { useEffect, useState } from "react";
-
-// const useThemeSwitcher = () => {
-//   const preferDarkQuery = "(prefer-color-scheme: dark)";
-//   const [mode, setMode] = useState("");
-//   console.log("Mode Value --> ", mode);
-
-//   useEffect(() => {
-//     const mediaQuery = window.matchMedia(preferDarkQuery);
-//     const userPref = window.localStorage.getItem("theme");
-
-//     const handleChange = () => {
-//       if (userPref) {
-//         let check = userPref === "dark" ? "dark" : "light";
-//         setMode(check);
-//         if (check === "dark") {
-//           document.documentElement.classList.add("dark");
-//         } else {
-//           document.documentElement.classList.remove("dark");
-//         }
-//       } else {
-//         let check = mediaQuery.matches ? "dark" : "light";
-//         setMode(check);
-//         if (check === "dark") {
-//           document.documentElement.classList.add("dark");
-//         } else {
-//           document.documentElement.classList.remove("dark");
-//         }
-//       }
-//     };
-
-//     /**
-//      * The function call check all the conditions on first load.
-//      * If theme is dark, when I reload the page then it will be dark.
-//      * And if it's light, then it will be light by reloading or refreshing.
-//      */
-//     // handleChange();
-
-//     mediaQuery.addEventListener("change", handleChange);
-//     return () => mediaQuery.removeEventListener("change", handleChange);
-//   }, []);
-
-//   // If mode change, set value in local storage
-//   useEffect(() => {
-//     if (mode === "dark") {
-//       window.localStorage.setItem("theme", "dark");
-//       document.documentElement.classList.add("dark");
-//     } else {
-//       window.localStorage.setItem("theme", "light");
-//       document.documentElement.classList.remove("dark");
-//     }
-//   }, [mode]);
-
-//   return [mode, setMode];
-// };
-
-// export default useThemeSwitcher;
