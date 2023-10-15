@@ -16,6 +16,8 @@ const Home = () => {
             src={profilePic}
             alt="profile-photo"
             className="w-3/4 h-auto"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
           />
         </div>
         {/* Left side title, text and buttons - start */}

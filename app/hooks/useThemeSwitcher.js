@@ -41,22 +41,16 @@ const useThemeSwitcher = () => {
 
   // If mode change and user explicitly toggles the theme, update localStorage
   useEffect(() => {
-    if (mode === "dark" || mode === "light") {
-      // Set the mode value in localStorage that'll be dark or light
-      window.localStorage.setItem("theme", mode);
+    // If mode value is dark then execute the following condition's codes
+    if (mode === "dark") {
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    }
 
-      /**
-       * Now set the classList value.
-       * If mode will be dark, then remove the light class and add the dark class.
-       * Otherwise remove the dark class and add the light class
-       */
-      if (mode === "dark") {
-        document.documentElement.classList.remove("light");
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        document.documentElement.classList.add("light");
-      }
+    // If mode value is light then execute the following condition's codes
+    if (mode === "light") {
+      window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
     }
   }, [mode]);
 
