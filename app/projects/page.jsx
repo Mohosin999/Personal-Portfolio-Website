@@ -13,7 +13,7 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-gray-900 bg-gray-200 shadow-2xl p-12 relative">
+    <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-gray-900 bg-gray-200 shadow-2xl p-12 relative lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       {/* The following div for 3d design - start */}
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900" />
       {/* The following div for 3d design - end */}
@@ -112,7 +112,10 @@ const Projects = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center">
       <Wrapper>
-        <AnimatedText text="This is project portion" />
+        <AnimatedText
+          text="This is project portion"
+          className="lg:!text-7xl sm:!text-6xl xs:text-4xl"
+        />
 
         <div className="grid grid-cols-12 gap-24 mt-16">
           {/* Featured projet */}
