@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const Experience = () => {
   return (
     <div className="my-24">
-      <h2 className="font-bold text-8xl mb-16 w-full text-center">
+      <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mt-16">
         Experience
       </h2>
 
-      <div className="w-[75%] mx-auto relative">
+      <div className="w-[75%] md:w-full mx-auto relative">
         <motion.div
           className="w-[60%] mx-auto flex flex-col items-center justify-between"
           initial={{ y: 50 }}
