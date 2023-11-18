@@ -7,6 +7,7 @@ import AnimatedText from "../components/animated-text";
 import { GithubIcon } from "../components/icons";
 import featuredImage from "../../public/featured.png";
 import { motion } from "framer-motion";
+import TransitionEffect from "../components/transition-effect";
 
 // Framer motion component
 const FramerImage = motion(Image);
@@ -119,6 +120,7 @@ const Project = ({ type, title, img, link, githubLink }) => {
 const Projects = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <TransitionEffect /> {/* It is use for loading time effect */}
       <Wrapper>
         <AnimatedText
           text="This is project portion"

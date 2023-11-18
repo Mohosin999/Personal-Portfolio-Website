@@ -6,6 +6,7 @@ import Wrapper from "../components/wrapper";
 import AnimatedText from "../components/animated-text";
 import articleImg from "../../public/featured.png";
 import { motion, useMotionValue } from "framer-motion";
+import TransitionEffect from "../components/transition-effect";
 
 // Framer motion component
 const FramerImage = motion(Image);
@@ -101,6 +102,7 @@ const Article = ({ title, link, img, date }) => {
 const Articles = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <TransitionEffect /> {/* It is use for loading time effect */}
       <Wrapper>
         <AnimatedText
           text="All of my articles shown here"

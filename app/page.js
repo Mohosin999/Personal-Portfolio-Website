@@ -5,10 +5,12 @@ import profilePic from "../public/images/akash.jpg";
 import AnimatedText from "./components/animated-text";
 import Link from "next/link";
 import { LinkArrow } from "./components/icons";
+import TransitionEffect from "./components/transition-effect";
 
 const Home = () => {
   return (
     <Wrapper className="pt-0 md:pt-16 sm:pt-8">
+      <TransitionEffect /> {/* It is use for loading time effect */}
       <div className="flex items-center justify-between w-full lg:flex-col">
         {/* Right side image */}
         <div className="w-1/2 md:w-full">

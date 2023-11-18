@@ -7,11 +7,13 @@ import Wrapper from "../components/wrapper";
 import AnimatedNumber from "../components/animated-number";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
+import TransitionEffect from "../components/transition-effect";
 
 const About = () => {
   return (
     <>
       <main className="flex flex-col items-center justify-center w-full">
+        <TransitionEffect /> {/* It is use for loading time effect */}
         <Wrapper>
           <AnimatedText
             text="Passion Fuel Perpose!"
