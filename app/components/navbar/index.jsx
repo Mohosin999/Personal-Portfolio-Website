@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className="flex items-center justify-between relative">
-        {/* Toogle button of Navbar (Emburger Menu) - start */}
+        {/* Toogle button of Navbar (Hamburger Menu) - start */}
         <button
           className="hidden lg:flex flex-col items-center justify-center"
           onClick={handleClick}
