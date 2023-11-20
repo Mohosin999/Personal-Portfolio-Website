@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const TransitionEffect = () => {
-  return +(
+  return (
     <>
       <motion.div
         className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-blue-500"
