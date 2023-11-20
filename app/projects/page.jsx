@@ -9,6 +9,8 @@ import AnimatedText from "../components/animated-text";
 import { GithubIcon } from "../components/icons";
 import caseStudyImage from "../../public/images/Case-Study.png";
 import TransitionEffect from "../components/transition-effect";
+import GithubLink from "../components/UI/github-link";
+import CaseStudyLink from "../components/UI/caseStudy-link";
 
 // Framer motion component
 const FramerImage = motion(Image);
@@ -61,30 +63,20 @@ const FeaturedProject = ({
         <p className="my-2 font-medium text-gray-900 sm:text-sm">{summary}</p>
         <div className="mt-2 flex items-center">
           {/* Frontend code's github link */}
-          <Link
+          <GithubLink
             href={frontendGithubLink}
-            target="_blank"
-            title="Frontend Code's GitHub Link"
-            className="w-10 hover:scale-105 active:scale-100 duration-300"
-          >
-            <GithubIcon />
-          </Link>
+            title="GitHub Link of Frontend Codes"
+          />
+
           {/* Backend code's github link */}
-          <Link
+          <GithubLink
             href={backendGithubLink}
-            target="_blank"
-            title="Backend Code's GitHub Link"
-            className="w-10 ml-4 hover:scale-105 active:scale-100 duration-300"
-          >
-            <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target="_blank"
-            className="ml-4 rounded-lg bg-gray-900 hover:scale-105 active:scale-100 duration-300 text-gray-200 p-2 px-6 font-semibold text-lg sm:px-4 sm:text-base"
-          >
-            Show Case-Study
-          </Link>
+            title="GitHub Link of Backend Codes"
+            className={"ml-4"}
+          />
+
+          {/* Link to show case-study of this project. */}
+          <CaseStudyLink link={link} text="Show Case-Study" className="ml-4" />
         </div>
       </div>
     </article>
@@ -127,16 +119,14 @@ const Project = ({ type, title, img, link, githubLink }) => {
         </Link>
         {/* Github link and visit link here */}
         <div className="mt-2 w-full flex items-center justify-between">
-          <Link href={githubLink} target="_blank" className="w-8 md:w-6">
-            <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target="_blank"
-            className="rounded-lg bg-gray-900 text-gray-200 p-2 px-4 font-semibold text-base md:text-sm"
-          >
-            Visit
-          </Link>
+          <GithubLink href={githubLink} className="!w-8 md:!w-6" />
+
+          {/* Link to show case-study of this project. */}
+          <CaseStudyLink
+            link={link}
+            text="Show Case-Study"
+            className="!px-4 !text-base md:!text-sm"
+          />
         </div>
       </div>
     </article>
@@ -175,14 +165,14 @@ const Projects = () => {
           {/* Other projects */}
           <div className="col-span-6 sm:col-span-12">
             <Project
-              title="ShoeStore eCommerce Project"
+              title="Clean Youtube Project"
               img={caseStudyImage}
               link="/"
-              githubLink="/"
-              type="Featured Project"
+              githubLink="https://github.com/Mohosin999/Clean-YouTube-Project"
+              type="Project Showcase"
             />
           </div>
-          <div className="col-span-6 sm:col-span-12">
+          {/* <div className="col-span-6 sm:col-span-12">
             <Project
               title="ShoeStore eCommerce Project"
               img={caseStudyImage}
@@ -190,7 +180,7 @@ const Projects = () => {
               githubLink="/"
               type="Featured Project"
             />
-          </div>
+          </div> */}
         </div>
       </Wrapper>
     </main>
