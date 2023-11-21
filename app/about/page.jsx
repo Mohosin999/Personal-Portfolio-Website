@@ -14,11 +14,8 @@ const About = () => {
     <>
       <main className="flex flex-col items-center justify-center w-full">
         <TransitionEffect /> {/* It is use for loading time effect */}
-        <Wrapper>
-          <AnimatedText
-            text="Passion Fuel Perpose!"
-            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl"
-          />
+        <Wrapper className="!pt-0">
+          <AnimatedText text="Passion Fuel Perpose!" className="mb-16" />
           <div className="grid grid-cols-8 gap-16 sm:gap-8 w-full">
             {/* Left side - start */}
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">

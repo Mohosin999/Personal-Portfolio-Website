@@ -142,11 +142,8 @@ const Projects = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center">
       <TransitionEffect /> {/* It is use for loading time effect */}
-      <Wrapper>
-        <AnimatedText
-          text="This is project portion"
-          className="lg:!text-7xl sm:!text-6xl xs:text-4xl"
-        />
+      <Wrapper className="!pt-0">
+        <AnimatedText text="This is project portion" />
 
         <div className="grid grid-cols-12 gap-24 mt-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
           {/* Featured project */}

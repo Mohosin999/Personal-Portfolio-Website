@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper className="!py-8">
       <div className="flex items-center justify-between relative">
         {/* Toogle button of Navbar (Hamburger Menu) - start */}
         <button
@@ -56,7 +56,7 @@ const Navbar = () => {
             <CustomLink href="/" title="Home" className="mr-4" />
             <CustomLink href="/about" title="About" className="mx-4" />
             <CustomLink href="/projects" title="Projects" className="mx-4" />
-            <CustomLink href="/articles" title="Articles" className="ml-4" />
+            {/* <CustomLink href="/articles" title="Articles" className="ml-4" /> */}
           </nav>
 
           {/**
@@ -146,12 +146,12 @@ const Navbar = () => {
                 className=""
                 toggle={handleClick}
               />
-              <CustomMobileLink
+              {/* <CustomMobileLink
                 href="/articles"
                 title="Articles"
                 className=""
                 toggle={handleClick}
-              />
+              /> */}
             </nav>
 
             {/**
