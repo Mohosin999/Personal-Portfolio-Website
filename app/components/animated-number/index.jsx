@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
-const AnimatedNumber = ({ value }) => {
+const AnimatedNumber = ({ value, className }) => {
   const ref = useRef(null);
 
   // Animation hooks from frammer motion.
@@ -24,7 +24,12 @@ const AnimatedNumber = ({ value }) => {
     });
   }, [springValue, value]);
 
-  return <span ref={ref}></span>;
+  return (
+    <span
+      ref={ref}
+      className={`text-gray-900 dark:text-gray-200 font-bold text-4xl lg:text-3xl sm:text-2xl ${className}`}
+    ></span>
+  );
 };
 
 export default AnimatedNumber;
