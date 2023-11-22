@@ -2,11 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Experience = () => {
+const Education = () => {
   return (
     <div className="">
       <h2 className="font-bold text-4xl lg:text-3xl sm:text-2xl mt-28 lg:mt-20 md:mt-16 w-full text-center text-gray-900 dark:text-gray-200">
-        Experience
+        Education
       </h2>
 
       <motion.div
@@ -29,4 +29,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

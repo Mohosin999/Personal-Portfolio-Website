@@ -8,6 +8,7 @@ import AnimatedNumber from "../components/animated-number";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
 import TransitionEffect from "../components/transition-effect";
+import Education from "../components/education";
 
 const About = () => {
   return (
@@ -79,9 +80,9 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block">
-                  <AnimatedNumber value={50} />+
+                  <AnimatedNumber value={0} />
                 </span>
-                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
                   satisfied clients
                 </h2>
               </div>
@@ -90,16 +91,16 @@ const About = () => {
                 <span className="inline-block">
                   <AnimatedNumber value={20} />
                 </span>
-                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
                   projects completed
                 </h2>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-4xl lg:text-3xl sm:text-2xl">
+                <span className="inline-block text-gray-900 dark:text-gray-200 text-4xl lg:text-3xl sm:text-2xl">
                   <AnimatedNumber value={5} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
                   years of experience
                 </h2>
               </div>
@@ -110,7 +111,7 @@ const About = () => {
           {/* Skills section */}
           <Skills />
           <Experience />
-          <h2 className="mt-16 text-8xl font-bold">Education</h2>
+          <Education />
         </Wrapper>
       </main>
     </>
