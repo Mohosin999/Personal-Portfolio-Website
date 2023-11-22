@@ -8,7 +8,7 @@ const GithubLink = ({ href, title, className }) => {
       href={href}
       target="_blank"
       title={title}
-      className={`w-10 hover:scale-105 active:scale-100 duration-300 ${className}`}
+      className={`w-10 md:w-6 hover:scale-105 active:scale-100 duration-300 text-gray-900 dark:text-gray-100 ${className}`}
     >
       <GithubIcon />
     </Link>

@@ -26,9 +26,9 @@ const FeaturedProject = ({
   backendGithubLink,
 }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-gray-900 bg-gray-200 shadow-2xl p-12 relative lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+    <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-gray-900 bg-gray-200 dark:border-gray-200 dark:bg-gray-800 shadow-2xl p-12 relative lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       {/* The following div for 3d design - start */}
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900 xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900 dark:bg-gray-200 xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       {/* The following div for 3d design - end */}
 
       <Link
@@ -48,19 +48,21 @@ const FeaturedProject = ({
       </Link>
 
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-purple-600 font-medium text-xl xs:text-base">
+        <span className="text-purple-600 dark:text-green-500 font-medium text-xl xs:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className="hover:underline dark:hover:text-gray-300 underline-offset-2 select-none"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold sm:text-sm">
+          <h2 className="my-2 w-full text-left text-4xl lg:text-2xl text-gray-900 dark:text-gray-200 font-bold">
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-gray-900 sm:text-sm">{summary}</p>
+        <p className="my-2 font-medium text-gray-900 dark:text-gray-300 text-lg lg:text-base xs:text-sm">
+          {summary}
+        </p>
         <div className="mt-2 flex items-center">
           {/* Frontend code's github link */}
           <GithubLink
@@ -86,9 +88,9 @@ const FeaturedProject = ({
 // Other Projects
 const Project = ({ type, title, img, link, githubLink }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-gray-900 bg-gray-200 p-6 relative xs:p-4">
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-gray-900 bg-gray-200 dark:border-gray-200 dark:bg-gray-800 p-6 relative xs:p-4">
       {/* The following div for 3d design - start */}
-      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900 md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
+      <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-gray-900 dark:bg-gray-200 md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
       {/* The following div for 3d design - end */}
       <Link
         href={link}
@@ -105,15 +107,15 @@ const Project = ({ type, title, img, link, githubLink }) => {
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-purple-600 font-medium text-xl lg:text-lg md:text-base">
+        <span className="text-purple-600 dark:text-green-500 font-medium text-xl lg:text-lg md:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className="hover:underline dark:hover:text-gray-300 underline-offset-2 select-none"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl text-gray-900 dark:text-gray-200">
             {title}
           </h2>
         </Link>
@@ -143,9 +145,12 @@ const Projects = () => {
     <main className="w-full mb-16 flex flex-col items-center justify-center">
       <TransitionEffect /> {/* It is use for loading time effect */}
       <Wrapper className="!pt-0">
-        <AnimatedText text="This is project portion" />
+        <AnimatedText
+          text="All of My Projects"
+          className="mb-14 lg:mb-10 md:mb-6"
+        />
 
-        <div className="grid grid-cols-12 gap-24 mt-16 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+        <div className="grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 sm:gap-y-12">
           {/* Featured project */}
           <div className="col-span-12">
             <FeaturedProject

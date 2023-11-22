@@ -15,7 +15,7 @@ const Experience = () => {
         transition={{ duration: 0.5, type: "spring" }}
         className="w-full"
       >
-        <p className="mt-8 lg:mt-6 text-base text-gray-900 dark:text-gray-300">
+        <p className="mt-8 lg:mt-6 text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Reprehenderit neque tenetur ex rerum ratione ullam accusantium
           consequuntur aspernatur excepturi! Blanditiis itaque corporis

@@ -30,14 +30,14 @@ const Home = () => {
             className="!text-left lg:!text-center"
           />
 
-          <p className="my-4 text-base lg:text-sm text-gray-900 dark:text-gray-300">
+          <p className="my-4 text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300">
             Front-end development, also known as client-side development,
             focuses on the visual and interactive elements of a website or web
             application. Front-end developers are responsible for creating the
             user interface (UI), ensuring that web pages are visually appealing,
             responsive, and user-friendly.
           </p>
-          <p className="mt-2 mb-6 text-base lg:text-sm text-gray-900 dark:text-gray-300">
+          <p className="mt-2 mb-6 text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300">
             Front-end development, also known as client-side development,
             focuses on the visual and interactive elements of a website or web
             application. Front-end developers are responsible for creating the

@@ -29,22 +29,22 @@ const About = () => {
              * =====================
              */}
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
-              <h2 className="mb-4 font-bold text-lg uppercase text-gray-900/75 dark:text-gray-200/75">
+              <h2 className="mb-4 font-bold text-xl lg:text-lg uppercase text-gray-900/75 dark:text-gray-200/75">
                 Biography
               </h2>
-              <p className="text-base lg:text-sm text-gray-900 dark:text-gray-300">
+              <p className="text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Suscipit odio in mollitia quo velit adipisci eveniet, nobis
                 architecto magni dignissimos.
               </p>
-              <p className="text-base lg:text-sm text-gray-900 dark:text-gray-300 my-4">
+              <p className="text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300 my-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptate porro repellendus asperiores voluptatum aut et ducimus
                 pariatur cumque dolores debitis laudantium molestiae provident,
                 possimus assumenda velit deleniti quis suscipit enim aspernatur
                 molestias quae labore! Neque at optio eaque saepe recusandae.
               </p>
-              <p className="text-base lg:text-sm text-gray-900 dark:text-gray-300">
+              <p className="text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
                 deserunt tempore voluptatem earum iure mollitia ipsam rerum eius
                 id? Fuga dolorem tempora aperiam, saepe est mollitia nihil
@@ -80,15 +80,6 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block">
-                  <AnimatedNumber value={0} />
-                </span>
-                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
-                  satisfied clients
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block">
                   <AnimatedNumber value={20} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
@@ -102,6 +93,15 @@ const About = () => {
                 </span>
                 <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
                   years of experience
+                </h2>
+              </div>
+
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block">
+                  <AnimatedNumber value={0} />
+                </span>
+                <h2 className="text-xl font-medium capitalize text-gray-900/75 xl:text-center md:text-lg sm:text-base xs:text-sm dark:text-gray-200/75">
+                  satisfied clients
                 </h2>
               </div>
             </div>

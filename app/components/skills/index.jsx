@@ -27,7 +27,7 @@ const Skills = () => {
         {allSkills.map((skill, index) => (
           <div
             key={index}
-            className="text-lg md:text-base text-gray-900 dark:text-gray-300 mx-2 md:mx-1 my-2 md:my-1 border border-green-500 border-solid py-2 px-5 bg-gray-300 dark:bg-gray-800 rounded-full"
+            className="text-lg lg:text-base xs:text-sm text-gray-900 dark:text-gray-300 mx-2 md:mx-1 my-2 md:my-1 border border-green-500 border-solid py-2 px-5 bg-gray-300 dark:bg-gray-800 rounded-full"
           >
             {skill}
           </div>
