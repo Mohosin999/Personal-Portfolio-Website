@@ -1,9 +1,13 @@
-import React from 'react'
+import Hero from "@/components/ui/Hero";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="w-full h-screen bg-bgcolor relative flex items-center justify-center">
+      <div className="absolute flex items-center justify-center">
+        <Hero />
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
