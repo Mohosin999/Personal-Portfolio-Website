@@ -13,9 +13,10 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primarycolor:"#F45508",
-        secondarycolor:"#121214",
-        bgcolor:"#0D0D0F"
+        primarycolor: "#F45508",
+        secondarycolor: "#121214",
+        bgcolor: "#0D0D0F",
+        cardcolor: "#212121",
       },
     },
   },
@@ -23,15 +24,15 @@ module.exports = {
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {
-          'bg-grid': (color) => ({
+          "bg-grid": (color) => ({
             backgroundImage: `url("${svgToDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${color}"><path d="M0 .5H31.5V32"/></svg>`
             )}")`,
           }),
         },
         {
-          values: theme('colors'),
-          type: ['color', 'any'], 
+          values: theme("colors"),
+          type: ["color", "any"],
         }
       );
     },

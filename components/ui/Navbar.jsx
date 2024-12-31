@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <ul className="w-full h-full flex items-center justify-center gap-5">
+      <ul className="w-full h-full flex items-center justify-center gap-6">
         {navlinks.map((link, index) => (
           <li
             key={index}
