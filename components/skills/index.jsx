@@ -57,16 +57,16 @@ const Skills = () => {
             logo={<SiNextdotjs className="text-white" />}
           />
           <Skill
-            name={"Material UI"}
-            logo={<SiMui className="text-blue-400" />}
-          />
-          <Skill
             name={"Strapi"}
             logo={<SiStrapi className="text-purple-600" />}
           />
           <Skill
             name={"Styled Components"}
             logo={<SiStyledcomponents className="text-pink-400" />}
+          />
+          <Skill
+            name={"Material UI"}
+            logo={<SiMui className="text-blue-400" />}
           />
         </div>
       </div>

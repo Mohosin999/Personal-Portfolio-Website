@@ -9,7 +9,7 @@ const About = () => {
         {/* Right side hero section */}
         <div className="w-7/12">
           <div className="text_container">
-            <h2 className="text-5xl font-bold">About Me</h2>
+            <h2 className="text-4xl font-bold">About Me</h2>
             {/* Paragraph */}
             <p className="py-4 text-sm text-gray-400">
               Hi, I'm Mohosin Hasan Akash, a frontend web developer from
