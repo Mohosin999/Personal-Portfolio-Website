@@ -1,61 +1,96 @@
-import Service from "../ui/Service";
+import { FaJs, FaReact, FaSass, FaBootstrap } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiRedux,
+  SiStyledcomponents,
+  SiMui,
+  SiJest,
+  SiTestinglibrary,
+  SiExpress,
+  SiStrapi,
+  SiTypescript,
+} from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+
+import Skill from "../ui/Skill";
 
 const Skills = () => {
   return (
-    <div className="w-full bg-secondarycolor h-full flex flex-col items-center justify-center z-20">
-      <div className="w-11/12 h-full pt-14 flex flex-col items-center justify-center gap-4">
-        {/* Heading */}
-        <h2 className="text-5xl font-bold pb-6">My Services</h2>
-        <div className="w-full gap-4 flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center gap-4">
-            {/* ========================================================
-           *                      Service 01
-           ======================================================== */}
-            <Service
-              src={"./img/serv01.png"}
-              title={"Responsive Web Design"}
-              params={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Accusamus, magni ab quisquam incidunt excepturi dolor voluptas
-                  quasi provident rerum. Labore, quas perferendis voluptas error
-                  facilis voluptatum, asperiores quis maxime natus laboriosam.`}
-            />
-            {/* ========================================================
-           *                      Service 02
-           ======================================================== */}
-            <Service
-              src={"./img/serv02.png"}
-              title={"Web Application Development"}
-              params={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Accusamus, magni ab quisquam incidunt excepturi dolor voluptas
-                  quasi provident rerum. Labore, quas perferendis voluptas error
-                  facilis voluptatum, asperiores quis maxime natus laboriosam.`}
-            />
-          </div>
-          <div className="flex items-center justify-center gap-4">
-            {/* ========================================================
-            *                      Service 03
-           ======================================================== */}
-            <Service
-              src={"./img/serv03.png"}
-              title={"SEO-Friendly NextJS Website"}
-              params={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Accusamus, magni ab quisquam incidunt excepturi dolor voluptas
-                  quasi provident rerum. Labore, quas perferendis voluptas error
-                  facilis voluptatum, asperiores quis maxime natus laboriosam.`}
-            />
+    <div className="w-7/12 rounded-xl p-6 min-h-52 bg-cardcolor border border-gray-600/[0.5]">
+      <h2 className="text-xl font-semibold mb-6">Skills</h2>
 
-            {/* ========================================================
-            *                      Service 04
-            ======================================================== */}
-            <Service
-              src={"./img/serv04.png"}
-              title={"Custom UI/UX Design"}
-              params={`Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Accusamus, magni ab quisquam incidunt excepturi dolor voluptas
-                  quasi provident rerum. Labore, quas perferendis voluptas error
-                  facilis voluptatum, asperiores quis maxime natus laboriosam.`}
-            />
-          </div>
+      {/* Proficient */}
+      <div className="mb-8">
+        <h3 className="text-base text-gray-300 font-medium mb-2">Proficient</h3>
+        <div className="flex flex-wrap gap-3">
+          <Skill
+            name={"JavaScript"}
+            logo={<FaJs className="text-yellow-500" />}
+          />
+          <Skill
+            name={"React.js"}
+            logo={<FaReact className="text-blue-500" />}
+          />
+          <Skill
+            name={"Redux Toolkit"}
+            logo={<SiRedux className="text-violet-500" />}
+          />
+          <Skill
+            name={"Express.js"}
+            logo={<SiExpress className="text-gray-400" />}
+          />
+          <Skill
+            name={"Tailwind CSS"}
+            logo={<RiTailwindCssFill className="text-teal-400" />}
+          />
+        </div>
+      </div>
+
+      {/* Working Knowledge */}
+      <div className="mb-8">
+        <h3 className="text-base text-gray-300 font-medium mb-2">
+          Working Knowledge
+        </h3>
+        <div className="flex flex-wrap gap-3">
+          <Skill
+            name={"Next.js"}
+            logo={<SiNextdotjs className="text-white" />}
+          />
+          <Skill
+            name={"Material UI"}
+            logo={<SiMui className="text-blue-400" />}
+          />
+          <Skill
+            name={"Strapi"}
+            logo={<SiStrapi className="text-purple-600" />}
+          />
+          <Skill
+            name={"Styled Components"}
+            logo={<SiStyledcomponents className="text-pink-400" />}
+          />
+        </div>
+      </div>
+
+      {/* Familiar With */}
+      <div>
+        <h3 className="text-base text-gray-300 font-medium mb-2">
+          Familiar With
+        </h3>
+        <div className="flex flex-wrap gap-3">
+          <Skill
+            name={"TypeScript"}
+            logo={<SiTypescript className="text-blue-500" />}
+          />
+          <Skill name={"Sass"} logo={<FaSass className="text-pink-400" />} />
+          <Skill
+            name={"Bootstrap"}
+            logo={<FaBootstrap className="text-purple-500" />}
+          />
+          <Skill name={"Jest"} logo={<SiJest className="text-red-500" />} />
+          <Skill
+            name={"Testing Library"}
+            logo={<SiTestinglibrary className="text-orange-500" />}
+          />
         </div>
       </div>
     </div>
